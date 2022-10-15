@@ -26,11 +26,11 @@
   ],
   "type": "module",
   "main": "./dist/momentum-preflight.umd.js",
-  "module": "./dist/momentum-preflight.es.js",
+  "module": "./dist/momentum-preflight.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/momentum-preflight.es.js",
+      "import": "./dist/momentum-preflight.js",
       "require": "./dist/momentum-preflight.umd.js"
     }
   },

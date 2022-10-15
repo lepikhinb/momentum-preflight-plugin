@@ -23,6 +23,7 @@ export const useValidate = <T extends { [key: string]: any }>(
       headers: {
         "X-Inertia-Preflight": "true",
       },
+      onStart: () => (form.processing = false),
       onError: () => {
         const extraErrors = Object.keys(form.errors).filter((key) => !preserveErrors.includes(key))
 

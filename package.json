@@ -1,0 +1,55 @@
+{
+  "name": "momentum-preflight",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run lint && npm run format && vite build && tsc --declaration --emitDeclarationOnly",
+    "lint": "eslint \"src/**\" --fix",
+    "format": "prettier src/ --write"
+  },
+  "description": "A Vue 3 plugin that lets you implement realtime backend-driven request validation for Inertia apps.",
+  "keywords": [
+    "laravel",
+    "inertia",
+    "vue",
+    "request",
+    "validation"
+  ],
+  "author": "Boris Lepikhin<https://twitter.com/lepikhinb>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lepikhinb/momentum-preflight-plugin.git"
+  },
+  "homepage": "https://github.com/lepikhinb/momentum-preflight#readme",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/momentum-preflight.umd.js",
+  "module": "./dist/momentum-preflight.es.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/momentum-preflight.es.js",
+      "require": "./dist/momentum-preflight.umd.js"
+    }
+  },
+  "peerDependencies": {
+    "@inertiajs/inertia-vue3": "^0.x",
+    "vue": "^3.x"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "@vueuse/core": "^9.3.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-define-config": "^1.7.0",
+    "eslint-plugin-node": "^11.1.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8",
+    "vite-plugin-eslint": "^1.8.1"
+  }
+}
